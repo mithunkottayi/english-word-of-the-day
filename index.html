@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – May 01, 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 28px 28px 22px;
+      text-align: center;
+      color: white;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin-bottom: 14px;
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .word {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .part-of-speech {
+      display: inline-block;
+      margin-top: 8px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 3px 12px;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .card-body {
+      padding: 24px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .box {
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .box-title {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .box-content {
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    /* Pronunciation – soft blue */
+    .box-pronunciation {
+      background: #e8f4fd;
+      border-left: 4px solid #3b82f6;
+    }
+    .box-pronunciation .box-title  { color: #1d4ed8; }
+    .box-pronunciation .box-content { color: #1e40af; font-size: 18px; font-family: monospace; letter-spacing: 1px; }
+
+    /* Meaning – soft green */
+    .box-meaning {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+    }
+    .box-meaning .box-title  { color: #065f46; }
+    .box-meaning .box-content { color: #064e3b; }
+
+    /* Example – warm amber */
+    .box-example {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+    }
+    .box-example .box-title  { color: #92400e; }
+    .box-example .box-content { color: #78350f; font-style: italic; }
+    .box-example .box-content em {
+      font-style: normal;
+      font-weight: 700;
+      background: #fde68a;
+      border-radius: 4px;
+      padding: 0 3px;
+    }
+
+    /* Malayalam hint – soft violet */
+    .box-malayalam {
+      background: #f5f3ff;
+      border-left: 4px solid #8b5cf6;
+    }
+    .box-malayalam .box-title  { color: #5b21b6; }
+    .box-malayalam .box-content { color: #4c1d95; }
+    .box-malayalam .ml-word {
+      font-size: 22px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .box-malayalam .ml-note {
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    /* Usage tip – rose */
+    .box-tip {
+      background: #fff1f2;
+      border-left: 4px solid #f43f5e;
+    }
+    .box-tip .box-title  { color: #9f1239; }
+    .box-tip .box-content { color: #881337; font-size: 14px; }
+
+    .card-footer {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 14px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      letter-spacing: 0.5px;
+    }
+    .card-footer span { color: #667eea; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="card-header">
+      <div class="date-badge">May 01, 2026</div>
+      <div class="label">Word of the Day</div>
+      <div class="word">Persevere</div>
+      <div class="part-of-speech">verb</div>
+    </div>
+
+    <div class="card-body">
+
+      <!-- Pronunciation -->
+      <div class="box box-pronunciation">
+        <div class="box-title">Pronunciation</div>
+        <div class="box-content">pər-sə-VEER</div>
+      </div>
+
+      <!-- Meaning -->
+      <div class="box box-meaning">
+        <div class="box-title">Meaning</div>
+        <div class="box-content">
+          To keep trying to do something even when it is difficult or takes a long time.
+        </div>
+      </div>
+
+      <!-- Example sentence -->
+      <div class="box box-example">
+        <div class="box-title">Example Sentence</div>
+        <div class="box-content">
+          "Even when the Laravel deployment failed twice, Mithun decided to
+          <em>persevere</em> and fixed the issue by morning."
+        </div>
+      </div>
+
+      <!-- Malayalam hint -->
+      <div class="box box-malayalam">
+        <div class="box-title">Malayalam Hint &nbsp;🇮🇳</div>
+        <div class="box-content">
+          <span class="ml-word">ക്ഷമയോടെ തുടരുക</span>
+          <span class="ml-note">
+            "ബുദ്ധിമുട്ടുകൾ ഉണ്ടായാലും ശ്രമം ഉപേക്ഷിക്കാതെ മുന്നോട്ടു പോകുക" —
+            exactly what you do when debugging code!
+          </span>
+        </div>
+      </div>
+
+      <!-- Usage tip -->
+      <div class="box box-tip">
+        <div class="box-title">Usage Tip</div>
+        <div class="box-content">
+          Use <strong>persevere</strong> for long, ongoing effort —
+          "She persevered through the course." Use <strong>persist</strong>
+          when something continues (even annoyingly) — "The bug persists."
+          As a developer you'll use both a lot! 😄
+        </div>
+      </div>
+
+    </div><!-- /card-body -->
+
+    <div class="card-footer">
+      Curated for <span>Mithun</span> · Kerala, India · English Learning Journey
+    </div>
+
+  </div><!-- /card -->
+</body>
+</html>
