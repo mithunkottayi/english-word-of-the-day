@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Diligent</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 28px 28px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: #e0e7ff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .label-wotd {
+      color: #c4b5fd;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .word {
+      color: #ffffff;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+
+    .pronunciation {
+      color: #c4b5fd;
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    .card-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section {
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .section-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1e1b4b;
+    }
+
+    /* Meaning – plain indigo tint */
+    .meaning {
+      background: #eef2ff;
+      border-left: 4px solid #6366f1;
+    }
+    .meaning .section-label { color: #6366f1; }
+
+    /* Example – blue */
+    .example {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+    }
+    .example .section-label { color: #3b82f6; }
+
+    /* Malayalam Hint – orange */
+    .malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+    }
+    .malayalam .section-label { color: #f97316; }
+    .malayalam .section-text { font-size: 14px; }
+    .malayalam .ml-script { font-size: 17px; font-weight: 600; color: #c2410c; }
+
+    /* Tip – green */
+    .tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+    }
+    .tip .section-label { color: #16a34a; }
+
+    .card-footer {
+      text-align: center;
+      padding: 20px 28px 28px;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .footer-text {
+      color: #7c3aed;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .footer-text strong {
+      display: block;
+      font-size: 15px;
+      color: #4f46e5;
+      margin-bottom: 2px;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="card-header">
+      <div class="date-badge">May 01, 2026</div>
+      <div class="label-wotd">Word of the Day</div>
+      <div class="word">diligent</div>
+      <div class="pronunciation">/ˈdɪlɪdʒənt/</div>
+    </div>
+
+    <div class="card-body">
+
+      <div class="section meaning">
+        <div class="section-label">Meaning</div>
+        <div class="section-text">
+          Working hard, carefully, and with steady effort over time — not giving up easily.
+        </div>
+      </div>
+
+      <div class="section example">
+        <div class="section-label">Example</div>
+        <div class="section-text">
+          "Mithun is a <strong>diligent</strong> developer — he always reviews his Laravel code thoroughly before pushing to production."
+        </div>
+      </div>
+
+      <div class="section malayalam">
+        <div class="section-label">Malayalam Hint</div>
+        <div class="section-text">
+          <span class="ml-script">ഉത്സാഹശാലി / ശ്രദ്ധാലു</span><br>
+          ഉത്സാഹത്തോടും ജാഗ്രതയോടും കൂടി കഠിനാദ്ധ്വാനം ചെയ്യുന്ന ആൾ.<br>
+          <em style="color:#9a3412;font-size:13px;">Think of a student who studies every night without fail — that's diligent.</em>
+        </div>
+      </div>
+
+      <div class="section tip">
+        <div class="section-label">Usage Tip</div>
+        <div class="section-text">
+          Use <strong>"diligent"</strong> to give a sincere professional compliment.<br>
+          "She's a <em>diligent</em> worker." or "He made a <em>diligent</em> effort."<br>
+          It sounds more polished than just saying "hardworking."
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <div class="footer-text">
+        <strong>Keep learning.</strong>
+        Every word brings you closer. ✨
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
