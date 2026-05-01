@@ -3,170 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – May 01, 2026</title>
+  <title>Word of the Day – Diligent</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px 16px;
     }
 
     .card {
-      background: #ffffff;
+      background: #fff;
       border-radius: 24px;
       max-width: 480px;
       width: 100%;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
       overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
     }
 
     .card-header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 28px 28px 22px;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 28px 28px 32px;
       text-align: center;
-      color: white;
+      position: relative;
     }
 
     .date-badge {
       display: inline-block;
-      background: rgba(255,255,255,0.2);
-      border: 1px solid rgba(255,255,255,0.35);
-      border-radius: 20px;
+      background: rgba(255,255,255,0.18);
+      color: #e0e7ff;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.2px;
       text-transform: uppercase;
-      padding: 5px 14px;
-      margin-bottom: 14px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
     }
 
-    .label {
+    .label-wotd {
+      color: #c4b5fd;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      opacity: 0.8;
       margin-bottom: 8px;
     }
 
     .word {
+      color: #ffffff;
       font-size: 52px;
       font-weight: 800;
-      letter-spacing: -1px;
       line-height: 1;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      letter-spacing: -1px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.2);
     }
 
-    .part-of-speech {
-      display: inline-block;
-      margin-top: 8px;
-      background: rgba(255,255,255,0.25);
-      border-radius: 12px;
-      padding: 3px 12px;
-      font-size: 13px;
+    .pronunciation {
+      color: #c4b5fd;
+      font-size: 18px;
       font-style: italic;
-      font-weight: 500;
+      margin-top: 10px;
+      font-weight: 400;
     }
 
     .card-body {
-      padding: 24px 24px 28px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
-    .box {
+    .section {
       border-radius: 14px;
       padding: 16px 18px;
     }
 
-    .box-title {
+    .section-label {
       font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1.8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
 
-    .box-content {
+    .section-text {
       font-size: 15px;
       line-height: 1.6;
-      font-weight: 500;
+      color: #1e1b4b;
     }
 
-    /* Pronunciation – soft blue */
-    .box-pronunciation {
-      background: #e8f4fd;
+    /* Meaning – plain indigo tint */
+    .meaning {
+      background: #eef2ff;
+      border-left: 4px solid #6366f1;
+    }
+    .meaning .section-label { color: #6366f1; }
+
+    /* Example – blue */
+    .example {
+      background: #eff6ff;
       border-left: 4px solid #3b82f6;
     }
-    .box-pronunciation .box-title  { color: #1d4ed8; }
-    .box-pronunciation .box-content { color: #1e40af; font-size: 18px; font-family: monospace; letter-spacing: 1px; }
+    .example .section-label { color: #3b82f6; }
 
-    /* Meaning – soft green */
-    .box-meaning {
-      background: #ecfdf5;
-      border-left: 4px solid #10b981;
+    /* Malayalam Hint – orange */
+    .malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
     }
-    .box-meaning .box-title  { color: #065f46; }
-    .box-meaning .box-content { color: #064e3b; }
+    .malayalam .section-label { color: #f97316; }
+    .malayalam .section-text { font-size: 14px; }
+    .malayalam .ml-script { font-size: 17px; font-weight: 600; color: #c2410c; }
 
-    /* Example – warm amber */
-    .box-example {
-      background: #fffbeb;
-      border-left: 4px solid #f59e0b;
+    /* Tip – green */
+    .tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
     }
-    .box-example .box-title  { color: #92400e; }
-    .box-example .box-content { color: #78350f; font-style: italic; }
-    .box-example .box-content em {
-      font-style: normal;
-      font-weight: 700;
-      background: #fde68a;
-      border-radius: 4px;
-      padding: 0 3px;
-    }
-
-    /* Malayalam hint – soft violet */
-    .box-malayalam {
-      background: #f5f3ff;
-      border-left: 4px solid #8b5cf6;
-    }
-    .box-malayalam .box-title  { color: #5b21b6; }
-    .box-malayalam .box-content { color: #4c1d95; }
-    .box-malayalam .ml-word {
-      font-size: 22px;
-      font-weight: 700;
-      display: block;
-      margin-bottom: 2px;
-    }
-    .box-malayalam .ml-note {
-      font-size: 13px;
-      opacity: 0.75;
-    }
-
-    /* Usage tip – rose */
-    .box-tip {
-      background: #fff1f2;
-      border-left: 4px solid #f43f5e;
-    }
-    .box-tip .box-title  { color: #9f1239; }
-    .box-tip .box-content { color: #881337; font-size: 14px; }
+    .tip .section-label { color: #16a34a; }
 
     .card-footer {
-      background: #f8fafc;
-      border-top: 1px solid #e2e8f0;
-      padding: 14px 24px;
       text-align: center;
-      font-size: 12px;
-      color: #94a3b8;
-      letter-spacing: 0.5px;
+      padding: 20px 28px 28px;
+      border-top: 1px solid #f3f4f6;
     }
-    .card-footer span { color: #667eea; font-weight: 600; }
+
+    .footer-text {
+      color: #7c3aed;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .footer-text strong {
+      display: block;
+      font-size: 15px;
+      color: #4f46e5;
+      margin-bottom: 2px;
+      font-style: normal;
+    }
   </style>
 </head>
 <body>
@@ -174,65 +157,54 @@
 
     <div class="card-header">
       <div class="date-badge">May 01, 2026</div>
-      <div class="label">Word of the Day</div>
-      <div class="word">Persevere</div>
-      <div class="part-of-speech">verb</div>
+      <div class="label-wotd">Word of the Day</div>
+      <div class="word">diligent</div>
+      <div class="pronunciation">/ˈdɪlɪdʒənt/</div>
     </div>
 
     <div class="card-body">
 
-      <!-- Pronunciation -->
-      <div class="box box-pronunciation">
-        <div class="box-title">Pronunciation</div>
-        <div class="box-content">pər-sə-VEER</div>
-      </div>
-
-      <!-- Meaning -->
-      <div class="box box-meaning">
-        <div class="box-title">Meaning</div>
-        <div class="box-content">
-          To keep trying to do something even when it is difficult or takes a long time.
+      <div class="section meaning">
+        <div class="section-label">Meaning</div>
+        <div class="section-text">
+          Working hard, carefully, and with steady effort over time — not giving up easily.
         </div>
       </div>
 
-      <!-- Example sentence -->
-      <div class="box box-example">
-        <div class="box-title">Example Sentence</div>
-        <div class="box-content">
-          "Even when the Laravel deployment failed twice, Mithun decided to
-          <em>persevere</em> and fixed the issue by morning."
+      <div class="section example">
+        <div class="section-label">Example</div>
+        <div class="section-text">
+          "Mithun is a <strong>diligent</strong> developer — he always reviews his Laravel code thoroughly before pushing to production."
         </div>
       </div>
 
-      <!-- Malayalam hint -->
-      <div class="box box-malayalam">
-        <div class="box-title">Malayalam Hint &nbsp;🇮🇳</div>
-        <div class="box-content">
-          <span class="ml-word">ക്ഷമയോടെ തുടരുക</span>
-          <span class="ml-note">
-            "ബുദ്ധിമുട്ടുകൾ ഉണ്ടായാലും ശ്രമം ഉപേക്ഷിക്കാതെ മുന്നോട്ടു പോകുക" —
-            exactly what you do when debugging code!
-          </span>
+      <div class="section malayalam">
+        <div class="section-label">Malayalam Hint</div>
+        <div class="section-text">
+          <span class="ml-script">ഉത്സാഹശാലി / ശ്രദ്ധാലു</span><br>
+          ഉത്സാഹത്തോടും ജാഗ്രതയോടും കൂടി കഠിനാദ്ധ്വാനം ചെയ്യുന്ന ആൾ.<br>
+          <em style="color:#9a3412;font-size:13px;">Think of a student who studies every night without fail — that's diligent.</em>
         </div>
       </div>
 
-      <!-- Usage tip -->
-      <div class="box box-tip">
-        <div class="box-title">Usage Tip</div>
-        <div class="box-content">
-          Use <strong>persevere</strong> for long, ongoing effort —
-          "She persevered through the course." Use <strong>persist</strong>
-          when something continues (even annoyingly) — "The bug persists."
-          As a developer you'll use both a lot! 😄
+      <div class="section tip">
+        <div class="section-label">Usage Tip</div>
+        <div class="section-text">
+          Use <strong>"diligent"</strong> to give a sincere professional compliment.<br>
+          "She's a <em>diligent</em> worker." or "He made a <em>diligent</em> effort."<br>
+          It sounds more polished than just saying "hardworking."
         </div>
       </div>
 
-    </div><!-- /card-body -->
-
-    <div class="card-footer">
-      Curated for <span>Mithun</span> · Kerala, India · English Learning Journey
     </div>
 
-  </div><!-- /card -->
+    <div class="card-footer">
+      <div class="footer-text">
+        <strong>Keep learning.</strong>
+        Every word brings you closer. ✨
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
