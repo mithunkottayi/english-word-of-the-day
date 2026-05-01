@@ -3,201 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day</title>
+  <title>Word of the Day – Persist</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #3730a3 0%, #7c3aed 50%, #a855f7 100%);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px 16px;
     }
-
     .card {
       background: #ffffff;
-      border-radius: 24px;
+      border-radius: 20px;
       max-width: 480px;
       width: 100%;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      padding: 36px 32px 28px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
     }
-
-    .card-header {
-      background: linear-gradient(135deg, #4338ca, #7c3aed);
-      padding: 28px 28px 24px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .date-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #eef2ff, #ede9fe);
+      color: #6366f1;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #c4b5fd;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .word-title {
+      font-size: 52px;
+      font-weight: 800;
+      color: #312e81;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .pronunciation {
+      font-style: italic;
+      color: #818cf8;
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #a5b4fc;
       margin-bottom: 6px;
     }
-
-    .date-text {
-      font-size: 0.95rem;
-      color: #e0d9ff;
-      font-weight: 500;
+    .meaning {
+      font-size: 18px;
+      color: #1e1b4b;
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
-
-    .badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50px;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 14px;
-      color: #ddd6fe;
+    .box {
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-size: 16px;
+      line-height: 1.65;
       margin-bottom: 16px;
     }
-
-    .word-title {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-      line-height: 1.1;
-    }
-
-    .pronunciation {
-      font-size: 1.05rem;
-      font-style: italic;
-      color: #c4b5fd;
-      margin-top: 8px;
-    }
-
-    .part-of-speech {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      border-radius: 6px;
-      font-size: 0.75rem;
-      color: #e9d5ff;
-      padding: 2px 10px;
-      margin-top: 10px;
-      letter-spacing: 0.05em;
-    }
-
-    .card-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .section {
-      border-radius: 12px;
-      padding: 16px 18px;
-    }
-
-    .section-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .section-text {
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: #1e1b4b;
-    }
-
-    /* Meaning — soft indigo */
-    .section-meaning {
-      background: #f5f3ff;
-    }
-    .section-meaning .section-label { color: #7c3aed; }
-
-    /* Example — blue left border */
-    .section-example {
+    .example {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
     }
-    .section-example .section-label { color: #2563eb; }
-
-    /* Malayalam Hint — orange left border */
-    .section-malayalam {
+    .malayalam {
       background: #fff7ed;
       border-left: 4px solid #f97316;
+      color: #7c2d12;
     }
-    .section-malayalam .section-label { color: #ea580c; }
-    .section-malayalam .section-text { font-size: 1rem; color: #431407; }
-
-    /* Tip — green left border */
-    .section-tip {
+    .tip {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
+      color: #14532d;
     }
-    .section-tip .section-label { color: #16a34a; }
-
-    .card-footer {
-      background: linear-gradient(135deg, #4338ca, #7c3aed);
-      padding: 16px 28px;
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
       text-align: center;
-      color: #e0d9ff;
-      font-size: 0.85rem;
+      font-size: 14px;
+      color: #a5b4fc;
       font-style: italic;
-      letter-spacing: 0.02em;
+    }
+    #nav a {
+      font-size: 15px;
+      padding: 6px 0;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="card-header">
-      <div class="date-label">Word of the Day</div>
-      <div class="date-text">May 01, 2026</div>
-      <br>
-      <div class="badge">adjective</div>
-      <div class="word-title">Diligent</div>
-      <div class="pronunciation">/ˈdɪl.ɪ.dʒənt/</div>
+
+    <div class="date-badge">May 01, 2026</div>
+
+    <div class="word-title">Persist</div>
+    <div class="pronunciation">/pərˈsɪst/</div>
+
+    <div class="section-label">Meaning</div>
+    <div class="meaning">
+      To keep doing something even when it is hard or when others give up.
     </div>
 
-    <div class="card-body">
-
-      <div class="section section-meaning">
-        <div class="section-label">Meaning</div>
-        <div class="section-text">
-          Careful, hardworking, and giving full effort and attention to what you do — consistently and without giving up.
-        </div>
-      </div>
-
-      <div class="section section-example">
-        <div class="section-label">Example</div>
-        <div class="section-text">
-          "She is a <strong>diligent</strong> student who reads every chapter twice before the exam."
-        </div>
-      </div>
-
-      <div class="section section-malayalam">
-        <div class="section-label">Malayalam Hint</div>
-        <div class="section-text">
-          ശ്രദ്ധാലുവായ, അദ്ധ്വാനശീലമുള്ള — ജോലിയിൽ ശ്രദ്ധയും കഠിനാദ്ധ്വാനവും ഉള്ള ഒരാൾ.<br>
-          <span style="font-size:0.85rem; color:#92400e;">(A person who is careful and hardworking in their work)</span>
-        </div>
-      </div>
-
-      <div class="section section-tip">
-        <div class="section-label">Usage Tip</div>
-        <div class="section-text">
-          Use <em>diligent</em> to compliment someone's consistent hard work. At your job you might say: <em>"He is a diligent developer — his code is always clean and well-tested."</em>
-        </div>
-      </div>
-
+    <div class="section-label">Example</div>
+    <div class="box example">
+      "Mithun persisted with his English practice every day, and now he speaks with confidence."
     </div>
 
-    <div class="card-footer">
-      Keep learning. Every word brings you closer. 🌟
+    <div class="section-label">Malayalam Hint</div>
+    <div class="box malayalam">
+      <strong>തുടരുക / പിന്മാറാതിരിക്കുക</strong><br/>
+      (Thudaruka / Pinmaraathirikuka) — തടസ്സങ്ങൾ വന്നാലും ശ്രമം തുടരുക. Don't stop even when it's difficult.
     </div>
+
+    <div class="section-label">Tip</div>
+    <div class="box tip">
+      Use <strong>"persist in"</strong> or <strong>"persist with"</strong> something. In professional emails you can write: <em>"I will persist with resolving this issue."</em> — sounds confident and determined.
+    </div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
   </div>
+
+  <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+  </script>
 </body>
 </html>
