@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Persist</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 36px 32px 28px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+    }
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #eef2ff, #ede9fe);
+      color: #6366f1;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .word-title {
+      font-size: 52px;
+      font-weight: 800;
+      color: #312e81;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .pronunciation {
+      font-style: italic;
+      color: #818cf8;
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #a5b4fc;
+      margin-bottom: 6px;
+    }
+    .meaning {
+      font-size: 18px;
+      color: #1e1b4b;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .box {
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .example {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
+    }
+    .malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+    .tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 14px;
+      color: #a5b4fc;
+      font-style: italic;
+    }
+    #nav a {
+      font-size: 15px;
+      padding: 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="date-badge">May 01, 2026</div>
+
+    <div class="word-title">Persist</div>
+    <div class="pronunciation">/pərˈsɪst/</div>
+
+    <div class="section-label">Meaning</div>
+    <div class="meaning">
+      To keep doing something even when it is hard or when others give up.
+    </div>
+
+    <div class="section-label">Example</div>
+    <div class="box example">
+      "Mithun persisted with his English practice every day, and now he speaks with confidence."
+    </div>
+
+    <div class="section-label">Malayalam Hint</div>
+    <div class="box malayalam">
+      <strong>തുടരുക / പിന്മാറാതിരിക്കുക</strong><br/>
+      (Thudaruka / Pinmaraathirikuka) — തടസ്സങ്ങൾ വന്നാലും ശ്രമം തുടരുക. Don't stop even when it's difficult.
+    </div>
+
+    <div class="section-label">Tip</div>
+    <div class="box tip">
+      Use <strong>"persist in"</strong> or <strong>"persist with"</strong> something. In professional emails you can write: <em>"I will persist with resolving this issue."</em> — sounds confident and determined.
+    </div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
+  </div>
+
+  <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+  </script>
+</body>
+</html>
