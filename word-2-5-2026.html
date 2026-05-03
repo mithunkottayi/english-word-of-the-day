@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Clarify</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      padding: 36px 32px 28px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+    }
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #eef2ff, #ede9fe);
+      color: #6366f1;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .word-title {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .pronunciation {
+      font-style: italic;
+      color: #8b5cf6;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .meaning {
+      color: #374151;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .meaning .section-label { color: #6366f1; }
+    .box {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      font-size: 0.97rem;
+      line-height: 1.65;
+    }
+    .example {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e40af;
+    }
+    .example .section-label { color: #2563eb; }
+    .malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #92400e;
+    }
+    .malayalam .section-label { color: #ea580c; }
+    .tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+    .tip .section-label { color: #16a34a; }
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+    .footer strong {
+      color: #6366f1;
+      font-style: normal;
+    }
+    #nav a {
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    #nav a:hover { background: #eef2ff; }
+    @media (max-width: 400px) {
+      .card { padding: 28px 20px 20px; }
+      .word-title { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="date-badge">May 02, 2026 &nbsp;·&nbsp; Word of the Day</div>
+
+    <div class="word-title">Clarify</div>
+    <div class="pronunciation">/ˈklær.ɪ.faɪ/</div>
+
+    <div class="meaning">
+      <div class="section-label">Meaning</div>
+      To make something easier to understand by explaining it more clearly; to remove confusion or doubt.
+    </div>
+
+    <div class="box example">
+      <div class="section-label">Example</div>
+      "Before starting the project, Mithun emailed the client: <em>'Could you clarify exactly which features you need by launch day?'"</em>
+    </div>
+
+    <div class="box malayalam">
+      <div class="section-label">Malayalam Hint</div>
+      <strong>വ്യക്തമാക്കുക</strong> (vyakthamaakkuka) — making something clear, removing confusion. Just like you <em>vyakthamaakkunnu</em> a requirement before writing code!
+    </div>
+
+    <div class="box tip">
+      <div class="section-label">Usage Tip</div>
+      Use <strong>"Could you clarify…?"</strong> in meetings, Slack messages, or emails instead of "I don't understand." It sounds polite and professional. Try: <em>"Could you clarify the expected output?"</em>
+    </div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+
+    <div class="footer">
+      <strong>Keep learning.</strong> Every word brings you closer. 🌟
+    </div>
+
+  </div>
+
+  <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+  </script>
+</body>
+</html>
