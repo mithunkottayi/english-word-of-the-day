@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Concise</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(79,70,229,0.35);
+      max-width: 480px;
+      width: 100%;
+      padding: 36px 32px 28px;
+    }
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 6px;
+    }
+    .word {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #312e81;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .pronunciation {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #6366f1;
+      margin-bottom: 28px;
+    }
+    .section {
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+    .meaning {
+      font-size: 1.05rem;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    .box {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .box-blue {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
+    }
+    .box-orange {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+    .box-green {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 24px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #9ca3af;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    a { color: #6366f1; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 400px) {
+      .card { padding: 28px 20px 22px; }
+      .word { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="date-badge">May 03, 2026</div>
+
+    <div class="label">Word of the Day</div>
+    <div class="word">Concise</div>
+    <div class="pronunciation">/kənˈsaɪs/</div>
+
+    <div class="section">
+      <div class="section-title">Meaning</div>
+      <div class="meaning">Expressing something clearly using only a few words — brief but complete.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Example</div>
+      <div class="box box-blue">
+        "Please write a <strong>concise</strong> comment in your code so your teammates can understand it quickly."
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Malayalam Hint</div>
+      <div class="box box-orange">
+        <strong>ചുരുക്കമായി (churukkamaayi)</strong> — "Concise" എന്നാൽ കുറഞ്ഞ വാക്കുകൾ ഉപയോഗിച്ച് കൃത്യമായി പറയുക എന്നാണ്.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Tip</div>
+      <div class="box box-green">
+        Developers love concise writing! Use it in PR descriptions, error messages, and emails: <em>"Keep your commit messages concise."</em> It shows professionalism.
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+    <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    </script>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
+  </div>
+</body>
+</html>
