@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Diligent</title>
+  <title>Word of the Day – May 05, 2026</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -13,30 +13,40 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      padding: 24px 16px;
     }
 
     .card {
       background: #ffffff;
       border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
       max-width: 480px;
       width: 100%;
-      padding: 32px 28px 28px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      padding: 36px 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #6366f1, #a855f7, #7c3aed);
     }
 
     .date-badge {
       display: inline-block;
-      background: linear-gradient(90deg, #eef2ff, #ede9fe);
-      color: #4f46e5;
-      font-size: 0.78rem;
+      background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+      color: #5b21b6;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 24px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 22px;
     }
 
     .word-title {
@@ -44,29 +54,30 @@
       font-weight: 800;
       color: #3730a3;
       line-height: 1.1;
-      letter-spacing: -0.02em;
+      letter-spacing: -1px;
       margin-bottom: 6px;
     }
 
     .pronunciation {
       font-style: italic;
-      font-size: 1.1rem;
       color: #7c3aed;
-      margin-bottom: 28px;
+      font-size: 1.1rem;
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
     }
 
     .section-label {
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
       margin-bottom: 6px;
     }
 
-    .meaning-label { color: #6366f1; }
-    .meaning-text {
+    .meaning {
       font-size: 1.05rem;
-      color: #1e1b4b;
+      color: #1f2937;
       line-height: 1.6;
       margin-bottom: 20px;
     }
@@ -75,80 +86,79 @@
       border-radius: 10px;
       padding: 14px 16px;
       margin-bottom: 16px;
-      line-height: 1.6;
       font-size: 0.97rem;
+      line-height: 1.6;
     }
 
-    .example-box {
+    .example {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
-      color: #1e3a5f;
+      color: #1e40af;
     }
-    .example-box .section-label { color: #2563eb; }
 
-    .malayalam-box {
+    .malayalam {
       background: #fff7ed;
       border-left: 4px solid #f97316;
-      color: #7c2d12;
+      color: #92400e;
     }
-    .malayalam-box .section-label { color: #ea580c; }
 
-    .tip-box {
+    .tip {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
       color: #14532d;
     }
-    .tip-box .section-label { color: #16a34a; }
-
-    .box p { margin: 0; }
 
     .footer {
       margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid #f3f4f6;
       text-align: center;
-      font-size: 0.88rem;
-      color: #a5b4fc;
+      color: #9ca3af;
+      font-size: 0.85rem;
       font-style: italic;
-      letter-spacing: 0.01em;
+    }
+
+    .footer span {
+      color: #7c3aed;
+      font-weight: 600;
     }
 
     #nav a {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.9rem;
-      padding: 6px 2px;
-      border-radius: 6px;
-      transition: opacity 0.2s;
+      font-size: 0.92rem;
     }
-    #nav a:hover { opacity: 0.7; }
+
+    @media (max-width: 420px) {
+      .card { padding: 28px 20px 22px; }
+      .word-title { font-size: 2.4rem; }
+    }
   </style>
 </head>
 <body>
   <div class="card">
 
-    <div class="date-badge">May 04, 2026 &nbsp;·&nbsp; Word of the Day</div>
+    <div class="date-badge">May 05, 2026</div>
 
-    <div class="word-title">Diligent</div>
-    <div class="pronunciation">/ˈdɪl·ɪ·dʒənt/</div>
+    <div class="word-title">concise</div>
+    <div class="pronunciation">/kənˈsaɪs/</div>
 
-    <div class="section-label meaning-label">Meaning</div>
-    <div class="meaning-text">
-      Working carefully and putting in steady, serious effort — someone who does not give up easily and always tries their best.
+    <div class="section-label">Meaning</div>
+    <div class="meaning">
+      Giving a lot of information clearly and in a few words; brief but complete.
     </div>
 
-    <div class="box example-box">
-      <div class="section-label">Example</div>
-      <p>"Mithun is a <strong>diligent</strong> developer — he reads every error log carefully and never skips testing before a release."</p>
+    <div class="section-label">Example</div>
+    <div class="box example">
+      "Your error report was <strong>concise</strong> — it described the bug clearly without any extra details, so we fixed it in minutes."
     </div>
 
-    <div class="box malayalam-box">
-      <div class="section-label">Malayalam Hint</div>
-      <p><strong>അധ്വാനശീലൻ / ശ്രദ്ധാലു</strong> — ശ്രദ്ധയോടും നിരന്തര പ്രയത്നത്തോടും കൂടി ജോലി ചെയ്യുന്ന ആൾ. "അദ്ദേഹം വളരെ ശ്രദ്ധാലുവായ ജോലിക്കാരനാണ്" എന്ന് പറയുന്നതുപോലെ.</p>
+    <div class="section-label">Malayalam Hint</div>
+    <div class="box malayalam">
+      <strong>ചുരുക്കിപ്പറയുക</strong> (churukkipparayuka) — "to say it briefly and clearly." Just like a good Git commit message: short, clear, and to the point!
     </div>
 
-    <div class="box tip-box">
-      <div class="section-label">Tip</div>
-      <p>Use <strong>diligent</strong> to compliment a teammate: <em>"You've been very diligent with the code reviews."</em> It sounds more professional than just saying "hardworking". Employers love this word in interviews!</p>
+    <div class="section-label">Tip</div>
+    <div class="box tip">
+      Use <strong>"concise"</strong> to compliment someone's communication at work. Example: <em>"The documentation you wrote is very concise."</em> It sounds professional and is a real compliment in any tech team.
     </div>
 
     <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
@@ -156,7 +166,9 @@
       <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
     </div>
 
-    <div class="footer">Keep learning. Every word brings you closer.</div>
+    <div class="footer">
+      Keep learning. <span>Every word brings you closer.</span>
+    </div>
 
   </div>
 
