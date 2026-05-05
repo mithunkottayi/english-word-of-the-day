@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Diligent</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 32px 28px 28px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #eef2ff, #ede9fe);
+      color: #4f46e5;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    .word-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #3730a3;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .pronunciation {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #7c3aed;
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .meaning-label { color: #6366f1; }
+    .meaning-text {
+      font-size: 1.05rem;
+      color: #1e1b4b;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      font-size: 0.97rem;
+    }
+
+    .example-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
+    }
+    .example-box .section-label { color: #2563eb; }
+
+    .malayalam-box {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+    .malayalam-box .section-label { color: #ea580c; }
+
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+    .tip-box .section-label { color: #16a34a; }
+
+    .box p { margin: 0; }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #a5b4fc;
+      font-style: italic;
+      letter-spacing: 0.01em;
+    }
+
+    #nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.9rem;
+      padding: 6px 2px;
+      border-radius: 6px;
+      transition: opacity 0.2s;
+    }
+    #nav a:hover { opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="date-badge">May 04, 2026 &nbsp;·&nbsp; Word of the Day</div>
+
+    <div class="word-title">Diligent</div>
+    <div class="pronunciation">/ˈdɪl·ɪ·dʒənt/</div>
+
+    <div class="section-label meaning-label">Meaning</div>
+    <div class="meaning-text">
+      Working carefully and putting in steady, serious effort — someone who does not give up easily and always tries their best.
+    </div>
+
+    <div class="box example-box">
+      <div class="section-label">Example</div>
+      <p>"Mithun is a <strong>diligent</strong> developer — he reads every error log carefully and never skips testing before a release."</p>
+    </div>
+
+    <div class="box malayalam-box">
+      <div class="section-label">Malayalam Hint</div>
+      <p><strong>അധ്വാനശീലൻ / ശ്രദ്ധാലു</strong> — ശ്രദ്ധയോടും നിരന്തര പ്രയത്നത്തോടും കൂടി ജോലി ചെയ്യുന്ന ആൾ. "അദ്ദേഹം വളരെ ശ്രദ്ധാലുവായ ജോലിക്കാരനാണ്" എന്ന് പറയുന്നതുപോലെ.</p>
+    </div>
+
+    <div class="box tip-box">
+      <div class="section-label">Tip</div>
+      <p>Use <strong>diligent</strong> to compliment a teammate: <em>"You've been very diligent with the code reviews."</em> It sounds more professional than just saying "hardworking". Employers love this word in interviews!</p>
+    </div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
+  </div>
+
+  <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+  </script>
+</body>
+</html>
