@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Persist</title>
+  <title>Word of the Day – Grateful</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -12,8 +12,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       padding: 24px 16px;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     }
     .card {
       background: #ffffff;
@@ -22,135 +22,143 @@
       max-width: 480px;
       width: 100%;
       padding: 36px 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed, #a855f7);
     }
     .date-badge {
       display: inline-block;
-      background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+      background: #ede9fe;
       color: #6d28d9;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 99px;
+      padding: 5px 14px;
+      border-radius: 999px;
       margin-bottom: 28px;
     }
-    .label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #a78bfa;
-      margin-bottom: 6px;
-    }
-    .word {
+    .word-title {
       font-size: 3rem;
       font-weight: 800;
-      color: #3730a3;
+      color: #1e1b4b;
       line-height: 1.1;
       letter-spacing: -0.02em;
+      margin-bottom: 6px;
     }
     .pronunciation {
       font-style: italic;
       font-size: 1.05rem;
       color: #7c3aed;
-      margin-top: 6px;
       margin-bottom: 28px;
     }
-    .section { margin-bottom: 18px; }
-    .section-title {
-      font-size: 0.72rem;
+    .section-label {
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #6b7280;
-      margin-bottom: 8px;
+      color: #9ca3af;
+      margin-bottom: 6px;
     }
-    .meaning-text {
-      font-size: 1rem;
-      color: #1f2937;
+    .meaning {
+      font-size: 1.05rem;
+      color: #374151;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
     .box {
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 14px 16px;
+      margin-bottom: 16px;
       font-size: 0.95rem;
-      line-height: 1.65;
+      line-height: 1.6;
     }
-    .example-box {
+    .box-example {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
-      color: #1e3a5f;
+      color: #1e40af;
     }
-    .malayalam-box {
+    .box-malayalam {
       background: #fff7ed;
       border-left: 4px solid #f97316;
-      color: #7c2d12;
+      color: #9a3412;
     }
-    .tip-box {
+    .box-tip {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
-      color: #14532d;
+      color: #15803d;
     }
-    .divider {
-      height: 1px;
-      background: #f3f4f6;
-      margin: 24px 0;
+    .box strong {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      opacity: 0.7;
     }
     .footer {
+      margin-top: 28px;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #9ca3af;
       font-style: italic;
-      margin-top: 8px;
+      padding-top: 20px;
+      border-top: 1px solid #f3f4f6;
     }
-    #nav a { transition: opacity 0.2s; }
-    #nav a:hover { opacity: 0.7; }
-    @media (max-width: 400px) {
-      .card { padding: 28px 20px 22px; }
-      .word { font-size: 2.4rem; }
+    .footer span {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #6d28d9;
+      margin-bottom: 2px;
+      font-style: normal;
     }
+    #nav a {
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    #nav a:hover { background: #ede9fe; }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="date-badge">May 09, 2026</div>
 
-    <div class="label">Word of the Day</div>
-    <div class="word">persist</div>
-    <div class="pronunciation">/pərˈsɪst/</div>
+    <div class="date-badge">May 10, 2026 &nbsp;·&nbsp; Word of the Day</div>
 
-    <div class="section">
-      <div class="section-title">Meaning</div>
-      <div class="meaning-text">
-        To keep doing something firmly and steadily, especially when it is difficult or when others oppose you.
-      </div>
+    <div class="word-title">Grateful</div>
+    <div class="pronunciation">/ ˈɡreɪt.fəl /</div>
+
+    <div class="section-label">Meaning</div>
+    <div class="meaning">Feeling or showing thanks because someone has done something kind or helpful for you.</div>
+
+    <div class="box box-example">
+      <strong>Example</strong>
+      "I am truly grateful for your help in fixing the bug before the deadline."
     </div>
 
-    <div class="section">
-      <div class="section-title">Example</div>
-      <div class="box example-box">
-        "He <strong>persisted</strong> in learning new English words every day, and his confidence grew quickly."
-      </div>
+    <div class="box box-malayalam">
+      <strong>Malayalam Hint</strong>
+      <strong style="font-size:1rem;font-style:normal;letter-spacing:0;text-transform:none;opacity:1">നന്ദിയുള്ള</strong>
+      (nandiyulla) — ആരെങ്കിലും നല്ലത് ചെയ്തതിന് നന്ദി തോന്നുക. "Thankful" പോലെ, പക്ഷേ കൂടുതൽ ഹൃദ്യവും formal-ഉം ആണ്.
     </div>
 
-    <div class="section">
-      <div class="section-title">Malayalam Hint</div>
-      <div class="box malayalam-box">
-        <strong>തുടരുക</strong> (Thudaruka) — ബുദ്ധിമുട്ടുകൾ ഉണ്ടായാലും ഒരു കാര്യം വിടാതെ തുടർന്ന് ചെയ്യുക. "Persist" ചെയ്യുന്ന ആൾ ഒരിക്കലും ഉപേക്ഷിക്കില്ല.
-      </div>
+    <div class="box box-tip">
+      <strong>Usage Tip</strong>
+      Use <em>grateful</em> in professional emails and messages — it sounds more sincere than simply saying "thanks". Try: <em>"I'm grateful for your support"</em> or <em>"We are grateful for this opportunity."</em>
     </div>
 
-    <div class="section">
-      <div class="section-title">Usage Tip</div>
-      <div class="box tip-box">
-        Use <strong>"persist in doing"</strong> or <strong>"persist with"</strong> something.<br/>
-        ✦ "She persisted <em>with</em> her studies despite the long hours."<br/>
-        ✦ "Don't give up — <em>persist</em> and you will succeed!"
-      </div>
+    <div class="footer">
+      <span>Keep learning. Every word brings you closer.</span>
+      Made with care for Mithun &mdash; Kerala, India
     </div>
-
-    <div class="divider"></div>
 
     <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
       <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
@@ -168,7 +176,6 @@ if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('
 if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
     </script>
 
-    <div class="footer">Keep learning. Every word brings you closer.</div>
   </div>
 </body>
 </html>
