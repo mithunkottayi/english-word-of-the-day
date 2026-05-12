@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Clarify</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      max-width: 480px;
+      width: 100%;
+      padding: 36px 32px 28px;
+    }
+    .date-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #6366f1;
+      margin-bottom: 6px;
+    }
+    .word {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #312e81;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .pronunciation {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #7c3aed;
+      margin-bottom: 28px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .meaning-text {
+      font-size: 1.05rem;
+      color: #1e1b4b;
+      line-height: 1.6;
+    }
+    .box {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.97rem;
+      line-height: 1.65;
+    }
+    .box-blue {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
+    }
+    .box-orange {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+    .box-green {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #6b7280;
+      font-style: italic;
+    }
+    #nav a {
+      padding: 6px 2px;
+      border-radius: 6px;
+      transition: opacity 0.2s;
+    }
+    #nav a:hover { opacity: 0.75; }
+    @media (max-width: 400px) {
+      .card { padding: 28px 20px 22px; }
+      .word { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="date-badge">May 11, 2026</div>
+
+    <div class="label">Word of the Day</div>
+    <div class="word">Clarify</div>
+    <div class="pronunciation">/ ˈklær.ɪ.faɪ /</div>
+
+    <div class="section">
+      <div class="label">Meaning</div>
+      <div class="meaning-text">
+        To make something easier to understand by explaining it more clearly or removing confusion.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Example</div>
+      <div class="box box-blue">
+        "Could you <strong>clarify</strong> what you mean by that requirement? I want to make sure I build the right feature."
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Malayalam Hint</div>
+      <div class="box box-orange">
+        <strong>വ്യക്തമാക്കുക</strong> (vyakthamaakkuka) — എന്തെങ്കിലും കൂടുതൽ വ്യക്തമായി വിശദീകരിക്കുക.
+        <br /><br />
+        "Can you clarify?" എന്നാൽ "ഇത് ഒന്നു കൂടി വ്യക്തമാക്കാമോ?" എന്നർഥം.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Tip</div>
+      <div class="box box-green">
+        Use <strong>"clarify"</strong> in meetings or client emails when a requirement is vague.
+        <br /><br />
+        Try: <em>"Before I start coding, let me clarify the expected behavior."</em>
+        <br />
+        It shows professionalism and prevents rework — a developer's best friend!
+      </div>
+    </div>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+    <script>
+var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+var p=new Date(cur),n=new Date(cur);
+p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+var today=new Date();today.setHours(0,0,0,0);
+function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+var pu=toUrl(p),nu=toUrl(n);
+if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    </script>
+
+  </div>
+</body>
+</html>
