@@ -7,165 +7,179 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
       min-height: 100vh;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      padding: 20px;
     }
     .card {
       background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      border-radius: 24px;
       max-width: 480px;
       width: 100%;
       padding: 36px 32px 28px;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
     }
     .date-badge {
       display: inline-block;
       background: linear-gradient(90deg, #4f46e5, #7c3aed);
       color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .word-label {
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-    .label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: #6366f1;
+      color: #7c3aed;
       margin-bottom: 6px;
     }
-    .word {
+    .word-title {
       font-size: 3rem;
       font-weight: 800;
-      color: #312e81;
+      color: #1e1b4b;
       line-height: 1.1;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .pronunciation {
-      font-style: italic;
       font-size: 1.05rem;
-      color: #7c3aed;
+      font-style: italic;
+      color: #6366f1;
+      margin-bottom: 28px;
+    }
+    .part-of-speech {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #ede9fe;
+      color: #5b21b6;
+      padding: 3px 10px;
+      border-radius: 999px;
       margin-bottom: 28px;
     }
     .section {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-    .meaning-text {
-      font-size: 1.05rem;
-      color: #1e1b4b;
-      line-height: 1.6;
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
-    .box {
-      border-radius: 10px;
-      padding: 14px 16px;
+    .section-body {
       font-size: 0.97rem;
-      line-height: 1.65;
+      line-height: 1.6;
+      color: #374151;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border-left: 4px solid;
     }
-    .box-blue {
-      background: #eff6ff;
-      border-left: 4px solid #3b82f6;
-      color: #1e3a5f;
-    }
-    .box-orange {
-      background: #fff7ed;
-      border-left: 4px solid #f97316;
-      color: #7c2d12;
-    }
-    .box-green {
-      background: #f0fdf4;
-      border-left: 4px solid #22c55e;
-      color: #14532d;
+    .meaning .section-label  { color: #6366f1; }
+    .meaning .section-body   { background: #f5f3ff; border-color: #6366f1; }
+
+    .example .section-label  { color: #2563eb; }
+    .example .section-body   { background: #eff6ff; border-color: #3b82f6; }
+
+    .malayalam .section-label { color: #d97706; }
+    .malayalam .section-body  { background: #fffbeb; border-color: #f59e0b; }
+
+    .tip .section-label { color: #059669; }
+    .tip .section-body  { background: #ecfdf5; border-color: #10b981; }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 24px 0;
     }
     .footer {
-      margin-top: 28px;
-      padding-top: 20px;
-      border-top: 1px solid #e5e7eb;
       text-align: center;
-      font-size: 0.88rem;
-      color: #6b7280;
+      font-size: 0.82rem;
+      color: #9ca3af;
       font-style: italic;
+      line-height: 1.5;
     }
-    #nav a {
-      padding: 6px 2px;
-      border-radius: 6px;
-      transition: opacity 0.2s;
+    .footer strong {
+      color: #7c3aed;
+      font-style: normal;
     }
-    #nav a:hover { opacity: 0.75; }
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       .card { padding: 28px 20px 22px; }
-      .word { font-size: 2.4rem; }
+      .word-title { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
   <div class="card">
 
-    <div class="date-badge">May 11, 2026</div>
+    <div class="date-badge">May 12, 2026</div>
 
-    <div class="label">Word of the Day</div>
-    <div class="word">Clarify</div>
-    <div class="pronunciation">/ ˈklær.ɪ.faɪ /</div>
+    <div class="word-label">Word of the Day</div>
+    <div class="word-title">clarify</div>
+    <div class="pronunciation">/ˈklærɪfaɪ/</div>
+    <div class="part-of-speech">verb</div>
 
-    <div class="section">
-      <div class="label">Meaning</div>
-      <div class="meaning-text">
-        To make something easier to understand by explaining it more clearly or removing confusion.
+    <div class="section meaning">
+      <div class="section-label">Meaning</div>
+      <div class="section-body">
+        To make something easier to understand by explaining it more clearly; to remove confusion or doubt about something.
       </div>
     </div>
 
-    <div class="section">
-      <div class="label">Example</div>
-      <div class="box box-blue">
-        "Could you <strong>clarify</strong> what you mean by that requirement? I want to make sure I build the right feature."
+    <div class="section example">
+      <div class="section-label">Example</div>
+      <div class="section-body">
+        "Could you <strong>clarify</strong> what you mean by 'deploy by Friday'? I want to make sure I deliver exactly what you need."
       </div>
     </div>
 
-    <div class="section">
-      <div class="label">Malayalam Hint</div>
-      <div class="box box-orange">
-        <strong>വ്യക്തമാക്കുക</strong> (vyakthamaakkuka) — എന്തെങ്കിലും കൂടുതൽ വ്യക്തമായി വിശദീകരിക്കുക.
-        <br /><br />
-        "Can you clarify?" എന്നാൽ "ഇത് ഒന്നു കൂടി വ്യക്തമാക്കാമോ?" എന്നർഥം.
+    <div class="section malayalam">
+      <div class="section-label">Malayalam Hint</div>
+      <div class="section-body">
+        <strong>വ്യക്തമാക്കുക</strong> (vyakthamaakkuka) — "clarify" എന്നാൽ ഒരു കാര്യം കൂടുതൽ വ്യക്തമായി വിശദീകരിക്കുക എന്നാണ്. Doubt ഉള്ളപ്പോൾ ചോദിക്കുക: "Can you clarify?"
       </div>
     </div>
 
-    <div class="section">
-      <div class="label">Tip</div>
-      <div class="box box-green">
-        Use <strong>"clarify"</strong> in meetings or client emails when a requirement is vague.
-        <br /><br />
-        Try: <em>"Before I start coding, let me clarify the expected behavior."</em>
-        <br />
-        It shows professionalism and prevents rework — a developer's best friend!
+    <div class="section tip">
+      <div class="section-label">Tip</div>
+      <div class="section-body">
+        Use <strong>"clarify"</strong> in professional emails when requirements are unclear — it sounds polite and shows attention to detail. Try: <em>"Just to clarify, should this feature work for all users or only admins?"</em>
       </div>
     </div>
 
-    <div class="footer">Keep learning. Every word brings you closer.</div>
+    <div class="divider"></div>
 
     <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
       <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
       <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
     </div>
     <script>
-var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
-var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
-var p=new Date(cur),n=new Date(cur);
-p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
-var today=new Date();today.setHours(0,0,0,0);
-function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
-var pu=toUrl(p),nu=toUrl(n);
-if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
-if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
     </script>
+
+    <div class="divider"></div>
+    <div class="footer">
+      Keep learning. <strong>Every word brings you closer.</strong>
+    </div>
 
   </div>
 </body>
