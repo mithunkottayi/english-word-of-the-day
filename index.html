@@ -1,186 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Clarify</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      padding: 20px;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 24px;
-      max-width: 480px;
-      width: 100%;
-      padding: 36px 32px 28px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
-    }
-    .date-badge {
-      display: inline-block;
-      background: linear-gradient(90deg, #4f46e5, #7c3aed);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 999px;
-      margin-bottom: 28px;
-    }
-    .word-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #7c3aed;
-      margin-bottom: 6px;
-    }
-    .word-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #1e1b4b;
-      line-height: 1.1;
-      margin-bottom: 4px;
-    }
-    .pronunciation {
-      font-size: 1.05rem;
-      font-style: italic;
-      color: #6366f1;
-      margin-bottom: 28px;
-    }
-    .part-of-speech {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: #ede9fe;
-      color: #5b21b6;
-      padding: 3px 10px;
-      border-radius: 999px;
-      margin-bottom: 28px;
-    }
-    .section {
-      margin-bottom: 18px;
-    }
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .section-body {
-      font-size: 0.97rem;
-      line-height: 1.6;
-      color: #374151;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border-left: 4px solid;
-    }
-    .meaning .section-label  { color: #6366f1; }
-    .meaning .section-body   { background: #f5f3ff; border-color: #6366f1; }
-
-    .example .section-label  { color: #2563eb; }
-    .example .section-body   { background: #eff6ff; border-color: #3b82f6; }
-
-    .malayalam .section-label { color: #d97706; }
-    .malayalam .section-body  { background: #fffbeb; border-color: #f59e0b; }
-
-    .tip .section-label { color: #059669; }
-    .tip .section-body  { background: #ecfdf5; border-color: #10b981; }
-
-    .divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 24px 0;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.82rem;
-      color: #9ca3af;
-      font-style: italic;
-      line-height: 1.5;
-    }
-    .footer strong {
-      color: #7c3aed;
-      font-style: normal;
-    }
-    @media (max-width: 480px) {
-      .card { padding: 28px 20px 22px; }
-      .word-title { font-size: 2.4rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word of the Day – Clarify</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 24px;
+    max-width: 480px;
+    width: 100%;
+    padding: 36px 32px 28px;
+    box-shadow: 0 25px 60px rgba(79,70,229,0.35);
+  }
+  .date-badge {
+    display: inline-block;
+    background: #eef2ff;
+    color: #6366f1;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  .word-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #3730a3;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .pronunciation {
+    font-size: 20px;
+    color: #a5b4fc;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+  .meaning {
+    font-size: 17px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .box {
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+  .box-example {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    color: #1e40af;
+  }
+  .box-malayalam {
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+    color: #9a3412;
+  }
+  .box-tip {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+  }
+  .box strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+  .divider {
+    height: 1px;
+    background: #f3f4f6;
+    margin: 24px 0;
+  }
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: #9ca3af;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  #nav a {
+    font-size: 15px;
+    padding: 8px 4px;
+    border-radius: 8px;
+    transition: color 0.2s;
+  }
+  #nav a:hover { color: #4338ca; }
+</style>
 </head>
 <body>
-  <div class="card">
+<div class="card">
 
-    <div class="date-badge">May 12, 2026</div>
+  <div class="date-badge">May 13, 2026</div>
 
-    <div class="word-label">Word of the Day</div>
-    <div class="word-title">clarify</div>
-    <div class="pronunciation">/ˈklærɪfaɪ/</div>
-    <div class="part-of-speech">verb</div>
+  <div class="word-title">Clarify</div>
+  <div class="pronunciation">/ˈklær.ɪ.faɪ/</div>
 
-    <div class="section meaning">
-      <div class="section-label">Meaning</div>
-      <div class="section-body">
-        To make something easier to understand by explaining it more clearly; to remove confusion or doubt about something.
-      </div>
-    </div>
-
-    <div class="section example">
-      <div class="section-label">Example</div>
-      <div class="section-body">
-        "Could you <strong>clarify</strong> what you mean by 'deploy by Friday'? I want to make sure I deliver exactly what you need."
-      </div>
-    </div>
-
-    <div class="section malayalam">
-      <div class="section-label">Malayalam Hint</div>
-      <div class="section-body">
-        <strong>വ്യക്തമാക്കുക</strong> (vyakthamaakkuka) — "clarify" എന്നാൽ ഒരു കാര്യം കൂടുതൽ വ്യക്തമായി വിശദീകരിക്കുക എന്നാണ്. Doubt ഉള്ളപ്പോൾ ചോദിക്കുക: "Can you clarify?"
-      </div>
-    </div>
-
-    <div class="section tip">
-      <div class="section-label">Tip</div>
-      <div class="section-body">
-        Use <strong>"clarify"</strong> in professional emails when requirements are unclear — it sounds polite and shows attention to detail. Try: <em>"Just to clarify, should this feature work for all users or only admins?"</em>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
-      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
-      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
-    </div>
-    <script>
-    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
-    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
-    var p=new Date(cur),n=new Date(cur);
-    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
-    var today=new Date();today.setHours(0,0,0,0);
-    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
-    var pu=toUrl(p),nu=toUrl(n);
-    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
-    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
-    </script>
-
-    <div class="divider"></div>
-    <div class="footer">
-      Keep learning. <strong>Every word brings you closer.</strong>
-    </div>
-
+  <div class="section-label">Meaning</div>
+  <div class="meaning">
+    To make something easier to understand by explaining it more clearly, or to remove confusion about it.
   </div>
+
+  <div class="box box-example">
+    <strong>Example</strong>
+    "Could you <em>clarify</em> what you mean by 'urgent'? I want to make sure I finish the right task first."
+  </div>
+
+  <div class="box box-malayalam">
+    <strong>Malayalam Hint</strong>
+    <strong style="font-size:15px;letter-spacing:0;text-transform:none;opacity:1;">വ്യക്തമാക്കുക (vyakthamaakkuka)</strong>
+    Something unclear becomes clear — just like debugging code until the error makes sense!
+  </div>
+
+  <div class="box box-tip">
+    <strong>Usage Tip</strong>
+    Use <em>clarify</em> in meetings, client emails, or Slack when something is confusing — it sounds polite and professional. Try: <em>"Let me clarify…"</em> or <em>"Can you clarify that requirement?"</em>
+  </div>
+
+  <div class="divider"></div>
+  <div class="footer">Keep learning. Every word brings you closer. 🌟</div>
+
+  <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+    <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+    <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+  </div>
+
+</div>
+
+<script>
+var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+var p=new Date(cur),n=new Date(cur);
+p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+var today=new Date();today.setHours(0,0,0,0);
+function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+var pu=toUrl(p),nu=toUrl(n);
+if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+</script>
+
 </body>
 </html>
