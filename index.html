@@ -3,64 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Concise</title>
+  <title>Word of the Day – May 15, 2026</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      padding: 24px 16px;
     }
     .card {
       background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      border-radius: 24px;
+      padding: 36px 32px 28px;
       max-width: 480px;
       width: 100%;
-      padding: 36px 32px 28px;
+      box-shadow: 0 25px 60px rgba(79,70,229,0.35);
     }
     .date-badge {
       display: inline-block;
-      background: linear-gradient(90deg, #e0e7ff, #ede9fe);
-      color: #4338ca;
-      font-size: 0.78rem;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 100px;
-      margin-bottom: 28px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
     }
     .label {
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #7c3aed;
-      margin-bottom: 6px;
+      color: #6366f1;
+      margin-bottom: 4px;
     }
     .word {
       font-size: 3rem;
-      font-weight: 800;
-      color: #312e81;
+      font-weight: 900;
+      color: #1e1b4b;
       line-height: 1.1;
+      margin-bottom: 6px;
       letter-spacing: -0.02em;
     }
     .pronunciation {
       font-style: italic;
-      color: #6366f1;
-      font-size: 1.15rem;
-      margin-top: 6px;
-      margin-bottom: 24px;
-    }
-    .divider {
-      border: none;
-      border-top: 2px solid #e5e7eb;
-      margin: 20px 0;
+      font-size: 1.05rem;
+      color: #7c3aed;
+      margin-bottom: 28px;
+      font-weight: 500;
     }
     .section-title {
       font-size: 0.72rem;
@@ -68,56 +64,50 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #9ca3af;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .meaning {
-      font-size: 1.1rem;
-      color: #1e1b4b;
+      font-size: 1.05rem;
+      color: #374151;
       line-height: 1.6;
-      font-weight: 500;
+      margin-bottom: 20px;
     }
     .box {
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: 1rem;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 0.97rem;
       line-height: 1.65;
-      margin-bottom: 0;
+      color: #374151;
     }
-    .example-box {
+    .box-example {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
-      color: #1e3a5f;
     }
-    .malayalam-box {
+    .box-example .section-title { color: #3b82f6; }
+    .box-malayalam {
       background: #fff7ed;
       border-left: 4px solid #f97316;
-      color: #7c2d12;
     }
-    .tip-box {
+    .box-malayalam .section-title { color: #f97316; }
+    .box-tip {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
-      color: #14532d;
     }
-    .section {
-      margin-bottom: 18px;
-    }
+    .box-tip .section-title { color: #16a34a; }
     .footer {
       margin-top: 28px;
       text-align: center;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #a5b4fc;
       font-style: italic;
-      padding-top: 18px;
-      border-top: 1px solid #e5e7eb;
+      font-weight: 500;
     }
     #nav a {
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: background 0.15s;
+      font-size: 0.95rem;
+      transition: opacity 0.15s;
     }
-    #nav a:hover {
-      background: #ede9fe;
-    }
+    #nav a:hover { opacity: 0.7; }
     @media (max-width: 400px) {
       .card { padding: 28px 20px 22px; }
       .word { font-size: 2.4rem; }
@@ -126,39 +116,31 @@
 </head>
 <body>
   <div class="card">
-    <div class="date-badge">May 14, 2026</div>
+
+    <div class="date-badge">May 15, 2026</div>
 
     <div class="label">Word of the Day</div>
-    <div class="word">concise</div>
-    <div class="pronunciation">/kənˈsaɪs/</div>
+    <div class="word">convenient</div>
+    <div class="pronunciation">/kən-VEEN-yənt/</div>
 
-    <hr class="divider" />
-
-    <div class="section">
-      <div class="section-title">Meaning</div>
-      <div class="meaning">Expressing ideas clearly and fully using as few words as possible.</div>
+    <div class="section-title">Meaning</div>
+    <div class="meaning">
+      Easy to use, access, or do; saves time and effort; fits well into your situation.
     </div>
 
-    <div class="section">
+    <div class="box box-example">
       <div class="section-title">Example</div>
-      <div class="box example-box">
-        "His concise commit message helped the whole team understand the fix right away."
-      </div>
+      "It is very convenient to use Laravel's built-in authentication system instead of writing everything from scratch."
     </div>
 
-    <div class="section">
+    <div class="box box-malayalam">
       <div class="section-title">Malayalam Hint</div>
-      <div class="box malayalam-box">
-        <strong>ചുരുക്കമായ</strong> (churukkamaya) — ആവശ്യമുള്ള കാര്യം മാത്രം, കൂടുതൽ വാക്കുകൾ ഇല്ലാതെ.
-        <br /><em>Short and to the point — no extra words.</em>
-      </div>
+      <strong>സൗകര്യപ്രദം</strong> (saukaryapradham) — something that is easy and handy to use or access.
     </div>
 
-    <div class="section">
-      <div class="section-title">Usage Tip</div>
-      <div class="box tip-box">
-        Use <strong>concise</strong> to praise someone's clear, brief writing or speech. Try: <em>"Please keep your pull request description concise"</em> or <em>"She gave a concise summary of the bug."</em>
-      </div>
+    <div class="box box-tip">
+      <div class="section-title">Tip</div>
+      Use <strong>"convenient"</strong> when something makes life easier or fits your schedule. A polite phrase to remember: <em>"Is this time convenient for you?"</em> — perfect for scheduling meetings professionally.
     </div>
 
     <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
@@ -166,18 +148,19 @@
       <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
     </div>
     <script>
-var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
-var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
-var p=new Date(cur),n=new Date(cur);
-p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
-var today=new Date();today.setHours(0,0,0,0);
-function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
-var pu=toUrl(p),nu=toUrl(n);
-if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
-if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
     </script>
 
     <div class="footer">Keep learning. Every word brings you closer.</div>
+
   </div>
 </body>
 </html>
