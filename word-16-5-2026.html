@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – persist</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      padding: 24px 16px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 36px 32px 28px;
+      box-shadow: 0 24px 60px rgba(79,70,229,0.35);
+    }
+    .date-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 4px;
+    }
+    .word {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #1e1b4b;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .pronunciation {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #6366f1;
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+    .meaning {
+      font-size: 1.05rem;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .box {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.97rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .box-example {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e40af;
+    }
+    .box-malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #9a3412;
+    }
+    .box-tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #166534;
+    }
+    .box strong {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      font-style: italic;
+    }
+    #nav a {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 400px) {
+      .card { padding: 28px 20px 22px; }
+      .word { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="date-badge">May 16, 2026</div>
+
+    <div class="label">Word of the Day</div>
+    <div class="word">persist</div>
+    <div class="pronunciation">/pərˈsɪst/</div>
+
+    <div class="section-title">Meaning</div>
+    <div class="meaning">
+      To keep doing something firmly and steadily, even when it is hard or others want you to stop.
+    </div>
+
+    <div class="box box-example">
+      <strong>Example</strong>
+      "He persisted with the bug fix until the application worked perfectly."
+    </div>
+
+    <div class="box box-malayalam">
+      <strong>Malayalam Hint &nbsp;🇮🇳</strong>
+      <span lang="ml">തുടർന്നു ശ്രമിക്കുക</span> — keep trying without giving up, no matter what.
+    </div>
+
+    <div class="box box-tip">
+      <strong>Usage Tip</strong>
+      Pair it with <em>in</em> or <em>with</em>: "persist <em>in</em> your efforts" or "persist <em>with</em> a difficult task." Never say "persist on."
+    </div>
+
+    <div class="footer">Keep learning. Every word brings you closer.</div>
+
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+    <script>
+var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+var p=new Date(cur),n=new Date(cur);
+p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+var today=new Date();today.setHours(0,0,0,0);
+function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+var pu=toUrl(p),nu=toUrl(n);
+if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    </script>
+  </div>
+</body>
+</html>
