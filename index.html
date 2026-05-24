@@ -5,189 +5,246 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Word of the Day – Concise</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
       min-height: 100vh;
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       padding: 20px;
     }
-
     .card {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      background: #ffffff;
+      border-radius: 20px;
       max-width: 480px;
       width: 100%;
-      padding: 36px 32px 28px;
-      position: relative;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
       overflow: hidden;
     }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+    .card-header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 28px 28px 24px;
+      text-align: center;
+      color: #fff;
     }
-
-    .date-badge {
-      display: inline-block;
-      background: linear-gradient(90deg, #eef2ff, #f3e8ff);
-      color: #6366f1;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+    .date-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 28px;
+      color: #c4b5fd;
+      margin-bottom: 12px;
+      font-weight: 600;
     }
-
+    .wotd-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e0d7ff;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
     .word-title {
       font-size: 3rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      letter-spacing: -1px;
+      color: #ffffff;
       line-height: 1.1;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-
     .pronunciation {
       font-style: italic;
-      color: #9ca3af;
       font-size: 1.05rem;
-      margin-bottom: 28px;
+      color: #c4b5fd;
+      margin-top: 8px;
       font-weight: 400;
     }
-
-    .section {
-      margin-bottom: 18px;
-    }
-
-    .section-label {
+    .part-of-speech {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 3px 12px;
       font-size: 0.72rem;
-      font-weight: 800;
+      color: #e9d5ff;
+      margin-top: 10px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6b7280;
-      margin-bottom: 6px;
+      font-weight: 600;
     }
-
-    .section-text {
-      font-size: 1rem;
-      color: #1f2937;
-      line-height: 1.6;
+    .card-body {
+      padding: 28px;
     }
-
+    .section {
+      margin-bottom: 20px;
+    }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6366f1;
+      margin-bottom: 8px;
+    }
+    .meaning-text {
+      font-size: 1.05rem;
+      color: #1e1b4b;
+      line-height: 1.65;
+      font-weight: 500;
+    }
     .box {
       border-radius: 10px;
       padding: 14px 16px;
-      font-size: 0.97rem;
-      line-height: 1.6;
-      color: #1f2937;
+      font-size: 0.95rem;
+      line-height: 1.65;
     }
-
-    .box-example {
+    .example-box {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
+      color: #1e40af;
     }
-
-    .box-malayalam {
+    .example-box .quote-mark {
+      font-size: 1.4rem;
+      color: #93c5fd;
+      line-height: 0;
+      vertical-align: -6px;
+      margin-right: 2px;
+    }
+    .malayalam-box {
       background: #fff7ed;
       border-left: 4px solid #f97316;
+      color: #7c2d12;
     }
-
-    .box-tip {
+    .malayalam-box .ml-word {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ea580c;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .tip-box {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
+      color: #14532d;
     }
-
-    .box em {
-      font-style: normal;
-      font-weight: 600;
+    .tip-box strong {
+      color: #16a34a;
     }
-
+    .divider {
+      border: none;
+      border-top: 1px solid #f0f0f5;
+      margin: 22px 0;
+    }
     .footer {
-      margin-top: 28px;
-      padding-top: 20px;
-      border-top: 1px solid #f3f4f6;
       text-align: center;
-      font-size: 0.85rem;
-      color: #9ca3af;
+      padding: 0 28px 28px;
+    }
+    .footer-text {
+      font-size: 0.88rem;
+      color: #8b5cf6;
       font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
-
+    .footer-text::before, .footer-text::after {
+      content: '✦';
+      margin: 0 6px;
+      color: #c4b5fd;
+    }
     #nav a {
-      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: #f5f3ff;
+      transition: background 0.2s;
+      font-size: 0.9rem;
     }
-
-    @media (max-width: 400px) {
-      .card { padding: 28px 20px 22px; }
+    #nav a:hover {
+      background: #ede9fe;
+    }
+    @media (max-width: 360px) {
       .word-title { font-size: 2.4rem; }
+      .card-body { padding: 20px; }
     }
   </style>
 </head>
 <body>
   <div class="card">
-
-    <div class="date-badge">May 23, 2026</div>
-
-    <div class="word-title">Concise</div>
-    <div class="pronunciation">/kənˈsaɪs/</div>
-
-    <div class="section">
-      <div class="section-label">Meaning</div>
-      <div class="section-text">Expressing a lot of information clearly using only a few words; short and to the point.</div>
+    <div class="card-header">
+      <div class="date-label">📅 May 24, 2026</div>
+      <div class="wotd-badge">✨ Word of the Day</div>
+      <div class="word-title">Concise</div>
+      <div class="pronunciation">/kənˈsaɪs/</div>
+      <div class="part-of-speech">adjective</div>
     </div>
 
-    <div class="section">
-      <div class="section-label">Example</div>
-      <div class="box box-example">
-        "Please write a <em>concise</em> summary of the bug report so the whole team can understand the issue quickly."
+    <div class="card-body">
+
+      <!-- Meaning -->
+      <div class="section">
+        <div class="section-label">📖 Meaning</div>
+        <div class="meaning-text">
+          Expressing much in few words — short, clear, and to the point, without unnecessary details.
+        </div>
       </div>
-    </div>
 
-    <div class="section">
-      <div class="section-label">Malayalam Hint</div>
-      <div class="box box-malayalam">
-        <strong>ചുരുക്കമായ (churukkamāya)</strong> — ആവശ്യമുള്ളത് മാത്രം, വ്യർത്ഥ വാക്കുകൾ ഇല്ലാതെ പറയുക. "Short and clear, no wasted words."
+      <!-- Example -->
+      <div class="section">
+        <div class="section-label">💬 Example</div>
+        <div class="box example-box">
+          <span class="quote-mark">"</span>His bug report was concise — just two sentences, but it explained everything the team needed to fix the issue.<span class="quote-mark">"</span>
+        </div>
       </div>
-    </div>
 
-    <div class="section">
-      <div class="section-label">Usage Tip</div>
-      <div class="box box-tip">
-        Use <em>concise</em> when you praise someone's clear writing — "That was a very concise email." In Laravel projects, a concise commit message or PR description saves everyone time!
+      <!-- Malayalam Hint -->
+      <div class="section">
+        <div class="section-label">🌿 Malayalam Hint</div>
+        <div class="box malayalam-box">
+          <span class="ml-word">ചുരുക്കമായി പറഞ്ഞ (churukkamaayi paranja)</span>
+          Think of how we say <em>"ചുരുക്കി പറ"</em> ("say it briefly") — <strong>concise</strong> is that quality in English. When your manager says <em>"keep it short"</em>, they want you to be <strong>concise</strong>.
+        </div>
       </div>
+
+      <!-- Tip -->
+      <div class="section">
+        <div class="section-label">💡 Usage Tip</div>
+        <div class="box tip-box">
+          Use <strong>concise</strong> to praise good writing or speaking. You can say:<br>
+          • <em>"Please write a concise summary."</em><br>
+          • <em>"That was a very concise explanation!"</em><br>
+          In professional emails, being concise is a superpower. Less is more!
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Navigation -->
+      <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+        <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+        <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+      </div>
+      <script>
+        var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+        var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+        var p=new Date(cur),n=new Date(cur);
+        p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+        var today=new Date();today.setHours(0,0,0,0);
+        function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+        var pu=toUrl(p),nu=toUrl(n);
+        if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+        if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+      </script>
+
+    </div><!-- end card-body -->
+
+    <div class="footer">
+      <div class="footer-text">Keep learning. Every word brings you closer.</div>
     </div>
 
-    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
-      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
-      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
-    </div>
-    <script>
-var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
-var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
-var p=new Date(cur),n=new Date(cur);
-p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
-var today=new Date();today.setHours(0,0,0,0);
-function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
-var pu=toUrl(p),nu=toUrl(n);
-if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
-if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
-    </script>
-
-    <div class="footer">Keep learning. Every word brings you closer.</div>
-
-  </div>
+  </div><!-- end card -->
 </body>
 </html>
