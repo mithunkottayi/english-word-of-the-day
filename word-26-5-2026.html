@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word of the Day – Concise</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 28px 32px 24px;
+      text-align: center;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: #e0e7ff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .wotd-label {
+      color: #c7d2fe;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .word-title {
+      color: #ffffff;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .pronunciation {
+      color: #a5b4fc;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .part-of-speech {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #e0e7ff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .card-body {
+      padding: 28px 28px 24px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6366f1;
+      margin-bottom: 6px;
+    }
+
+    .meaning-text {
+      font-size: 1.05rem;
+      color: #1e1b4b;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+
+    .box {
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .box-example {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a8a;
+    }
+
+    .box-malayalam {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+
+    .box-tip {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #14532d;
+    }
+
+    .box em {
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    .divider {
+      height: 1px;
+      background: #f3f4f6;
+      margin: 22px 0;
+    }
+
+    .footer {
+      background: #f5f3ff;
+      text-align: center;
+      padding: 18px 24px 22px;
+      border-top: 1px solid #ede9fe;
+    }
+
+    .footer-text {
+      color: #7c3aed;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .footer-sub {
+      color: #a78bfa;
+      font-size: 0.76rem;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 400px) {
+      .word-title { font-size: 2.4rem; }
+      .card-body { padding: 22px 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Header -->
+  <div class="card-header">
+    <div class="date-badge">May 26, 2026</div>
+    <div class="wotd-label">✦ Word of the Day ✦</div>
+    <div class="word-title">Concise</div>
+    <div class="pronunciation">/kənˈsaɪs/ &nbsp;·&nbsp; kun-SISE</div>
+    <div class="part-of-speech">adjective</div>
+  </div>
+
+  <!-- Body -->
+  <div class="card-body">
+
+    <!-- Meaning -->
+    <div class="section">
+      <div class="section-label">📖 Meaning</div>
+      <div class="meaning-text">
+        Expressing a lot of information clearly and in only a few words — short but complete.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Example -->
+    <div class="section">
+      <div class="section-label">💬 Example</div>
+      <div class="box box-example">
+        "His error message was <strong>concise</strong> — just one clear sentence that told the user exactly what went wrong."
+      </div>
+    </div>
+
+    <!-- Malayalam Hint -->
+    <div class="section">
+      <div class="section-label">🌿 Malayalam Hint</div>
+      <div class="box box-malayalam">
+        <strong>ചുരുക്കമായി</strong> (churukkamaayi) — ആവശ്യമുള്ളത് മാത്രം, അനാവശ്യ വാക്കുകൾ ഇല്ലാതെ.<br/>
+        <em>"Be concise" = ചുരുക്കി പറയൂ</em>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="section">
+      <div class="section-label">💡 Usage Tip</div>
+      <div class="box box-tip">
+        In professional emails and code comments, <strong>concise writing</strong> shows respect for the reader's time. Instead of writing three sentences, try saying the same thing in one — and say it clearly.
+        <br/><br/>
+        <em>Try it:</em> "Could you give me a <strong>concise</strong> summary of the bug?"
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+    </div>
+    <script>
+    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+    var p=new Date(cur),n=new Date(cur);
+    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+    var today=new Date();today.setHours(0,0,0,0);
+    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+    var pu=toUrl(p),nu=toUrl(n);
+    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+    </script>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-text">Keep learning. 🌟</div>
+    <div class="footer-sub">Every word brings you closer.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
