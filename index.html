@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Clarify</title>
+  <title>Word of the Day – Concise</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -20,206 +20,216 @@
     .card {
       background: #ffffff;
       border-radius: 24px;
-      max-width: 480px;
+      max-width: 520px;
       width: 100%;
-      padding: 36px 32px 28px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35), 0 8px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      padding: 28px 32px 24px;
+      text-align: center;
     }
 
     .date-badge {
       display: inline-block;
-      background: linear-gradient(135deg, #eef2ff, #ede9fe);
-      color: #6366f1;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      background: rgba(255,255,255,0.18);
+      color: #e0e7ff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 28px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
     }
 
     .word-title {
-      font-size: 3rem;
+      font-size: clamp(42px, 10vw, 58px);
       font-weight: 800;
-      color: #4f46e5;
-      letter-spacing: -0.02em;
+      color: #ffffff;
+      letter-spacing: -1px;
       line-height: 1.1;
-      margin-bottom: 6px;
     }
 
     .pronunciation {
       font-style: italic;
-      font-size: 1.05rem;
-      color: #7c3aed;
-      margin-bottom: 28px;
-      letter-spacing: 0.03em;
+      color: #c4b5fd;
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    .pos-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #ddd6fe;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-top: 12px;
+    }
+
+    .card-body {
+      padding: 28px 32px 32px;
+    }
+
+    .section {
+      margin-bottom: 20px;
     }
 
     .section-label {
-      font-size: 0.72rem;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 6px;
+      color: #8b5cf6;
+      margin-bottom: 8px;
     }
 
-    .meaning {
-      font-size: 1.08rem;
-      color: #1f2937;
+    .meaning-text {
+      font-size: 17px;
+      color: #1e1b4b;
+      font-weight: 500;
       line-height: 1.6;
-      margin-bottom: 22px;
     }
 
     .box {
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 18px;
-      font-size: 0.97rem;
-      line-height: 1.6;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 15.5px;
+      line-height: 1.65;
+      font-weight: 400;
     }
 
-    .example {
+    .example-box {
       background: #eff6ff;
       border-left: 4px solid #3b82f6;
       color: #1e40af;
     }
 
-    .malayalam {
+    .malayalam-box {
       background: #fff7ed;
       border-left: 4px solid #f97316;
-      color: #9a3412;
+      color: #7c2d12;
     }
 
-    .tip {
+    .tip-box {
       background: #f0fdf4;
       border-left: 4px solid #22c55e;
-      color: #166534;
+      color: #14532d;
     }
 
-    .box strong {
+    .tip-box strong, .example-box strong, .malayalam-box strong {
       display: block;
-      font-size: 0.72rem;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      opacity: 0.65;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      opacity: 0.75;
     }
 
-    /* Navigation */
-    #nav {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid #e5e7eb;
+    .divider {
+      height: 1px;
+      background: #f3f4f6;
+      margin: 22px 0;
     }
-
-    #nav a {
-      color: #6366f1;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    #nav a:hover { color: #4338ca; }
 
     .footer {
       text-align: center;
-      font-size: 0.82rem;
-      color: #9ca3af;
-      margin-top: 22px;
+      padding: 18px 32px 24px;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: #a78bfa;
       font-style: italic;
+      font-weight: 500;
     }
 
-    .footer span {
-      color: #6366f1;
-      font-weight: 600;
+    @media (max-width: 400px) {
+      .card-header { padding: 22px 20px 20px; }
+      .card-body { padding: 20px 20px 24px; }
+      .footer { padding: 14px 20px 20px; }
     }
-
-    /* Decorative dot */
-    .dot-row {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .dot { width: 8px; height: 8px; border-radius: 50%; }
-    .dot-1 { background: #6366f1; }
-    .dot-2 { background: #a78bfa; }
-    .dot-3 { background: #ddd6fe; }
   </style>
 </head>
 <body>
   <div class="card">
 
-    <!-- Date badge -->
-    <div class="date-badge">📅 May 27, 2026</div>
-
-    <!-- Decorative dots -->
-    <div class="dot-row">
-      <div class="dot dot-1"></div>
-      <div class="dot dot-2"></div>
-      <div class="dot dot-3"></div>
+    <!-- Header -->
+    <div class="card-header">
+      <div class="date-badge">May 29, 2026</div>
+      <div class="word-title">Concise</div>
+      <div class="pronunciation">/kənˈsaɪs/</div>
+      <div class="pos-badge">adjective</div>
     </div>
 
-    <!-- Word -->
-    <div class="word-title">Clarify</div>
-    <div class="pronunciation">/ ˈklær.ɪ.faɪ /</div>
+    <!-- Body -->
+    <div class="card-body">
 
-    <!-- Meaning -->
-    <div class="section-label">Meaning</div>
-    <div class="meaning">
-      To make something easier to understand by explaining it more clearly, or to remove confusion about it.
-    </div>
+      <!-- Meaning -->
+      <div class="section">
+        <div class="section-label">Meaning</div>
+        <div class="meaning-text">
+          Short and clear, using only the words that are necessary — without extra or unnecessary details.
+        </div>
+      </div>
 
-    <!-- Example -->
-    <div class="box example">
-      <strong>💬 Example</strong>
-      "Could you please clarify the requirements before I start building the Laravel API?"
-    </div>
+      <div class="divider"></div>
 
-    <!-- Malayalam Hint -->
-    <div class="box malayalam">
-      <strong>🌴 Malayalam Hint</strong>
-      <strong style="font-size:1rem;letter-spacing:0;text-transform:none;opacity:1;">വ്യക്തമാക്കുക</strong>
-      (vyakthamakkuka) — to make something clear or free from doubt.
-    </div>
+      <!-- Example -->
+      <div class="box example-box">
+        <strong>Example</strong>
+        "Please write a <em>concise</em> commit message so the whole team understands the change quickly."
+      </div>
 
-    <!-- Tip -->
-    <div class="box tip">
-      <strong>💡 Usage Tip</strong>
-      Use <em>"clarify"</em> in meetings, emails, and code reviews when something is unclear.
-      <em>"Can you clarify this ticket?"</em> sounds much more professional than
-      <em>"What do you mean?"</em>
-    </div>
+      <div style="height:14px"></div>
 
-    <!-- Navigation -->
-    <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
-      <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
-      <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
-    </div>
+      <!-- Malayalam Hint -->
+      <div class="box malayalam-box">
+        <strong>Malayalam Hint</strong>
+        <span style="font-size:17px;font-weight:600">ചുരുക്കിപ്പറഞ്ഞ</span> (churukkippanja) — "said briefly / to the point." When someone says <em>"ചുരുക്കത്തിൽ പറ"</em> (say it briefly), that feeling is exactly <strong>concise</strong>!
+      </div>
+
+      <div style="height:14px"></div>
+
+      <!-- Tip -->
+      <div class="box tip-box">
+        <strong>Usage Tip</strong>
+        As a Laravel developer, use <strong>concise</strong> when reviewing code or writing emails: <em>"Your API response should be more concise"</em> or <em>"Write a concise README."</em> It's a professional word that earns respect in any team meeting or code review.
+      </div>
+
+      <!-- Navigation -->
+      <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
+        <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
+        <a id="next-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">Next &#8594;</a>
+      </div>
+      <script>
+        var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
+        var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
+        var p=new Date(cur),n=new Date(cur);
+        p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
+        var today=new Date();today.setHours(0,0,0,0);
+        function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
+        var pu=toUrl(p),nu=toUrl(n);
+        if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
+        if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
+      </script>
+
+    </div><!-- end card-body -->
 
     <!-- Footer -->
     <div class="footer">
-      <span>Keep learning.</span> Every word brings you closer. 🚀
+      <div class="footer-text">Keep learning. Every word brings you closer. 🌟</div>
     </div>
 
-  </div>
-
-  <script>
-    var url=window.location.pathname,m=url.match(/word-(\d+)-(\d+)-(\d+)\.html/);
-    var cur=m?new Date(+m[3],+m[2]-1,+m[1]):new Date();
-    var p=new Date(cur),n=new Date(cur);
-    p.setDate(p.getDate()-1);n.setDate(n.getDate()+1);
-    var today=new Date();today.setHours(0,0,0,0);
-    function toUrl(d){if(d>today)return null;if(d.toDateString()===today.toDateString())return 'index.html';return 'word-'+d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+'.html';}
-    var pu=toUrl(p),nu=toUrl(n);
-    if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
-    if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
-  </script>
-
+  </div><!-- end card -->
 </body>
 </html>
