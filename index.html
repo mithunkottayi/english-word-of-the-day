@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word of the Day – Concise</title>
+  <title>Word of the Day – Persist</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6d28d9 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -21,77 +21,82 @@
       max-width: 480px;
       width: 100%;
       padding: 36px 32px 28px;
-      box-shadow: 0 25px 60px rgba(79, 70, 229, 0.35);
+      box-shadow: 0 25px 60px rgba(79,70,229,0.35);
     }
     .date-badge {
       display: inline-block;
-      background: linear-gradient(90deg, #e0e7ff, #ede9fe);
-      color: #4338ca;
+      background: linear-gradient(90deg, #eef2ff, #ede9fe);
+      color: #4f46e5;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 6px 14px;
       border-radius: 999px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .word-title {
       font-size: 3rem;
-      font-weight: 900;
+      font-weight: 800;
       color: #3730a3;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 8px;
     }
     .pronunciation {
       font-style: italic;
-      color: #818cf8;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
+      color: #7c3aed;
+      font-size: 1.05rem;
+      margin: 6px 0 28px;
     }
     .section-label {
       font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      color: #9ca3af;
       margin-bottom: 6px;
     }
-    .meaning-label { color: #6366f1; }
-    .meaning-text {
-      font-size: 1.05rem;
-      color: #374151;
-      line-height: 1.6;
+    .meaning {
+      font-size: 1.08rem;
+      color: #1f2937;
+      line-height: 1.65;
       margin-bottom: 22px;
     }
     .box {
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 18px;
+      border-radius: 12px;
+      padding: 14px 18px;
       font-size: 0.97rem;
-      line-height: 1.65;
+      line-height: 1.6;
+      margin-bottom: 16px;
     }
-    .example-box {
-      border-left: 4px solid #3b82f6;
+    .box-example {
       background: #eff6ff;
-      color: #1e40af;
+      border-left: 4px solid #3b82f6;
+      color: #1e3a5f;
     }
-    .example-label { color: #2563eb; }
-    .malayalam-box {
-      border-left: 4px solid #f97316;
+    .box-malayalam {
       background: #fff7ed;
-      color: #92400e;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
     }
-    .malayalam-label { color: #ea580c; }
-    .tip-box {
-      border-left: 4px solid #22c55e;
+    .box-tip {
       background: #f0fdf4;
+      border-left: 4px solid #22c55e;
       color: #14532d;
     }
-    .tip-label { color: #16a34a; }
+    .box strong {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      opacity: 0.7;
+    }
     .divider {
-      border: none;
-      border-top: 1px solid #e5e7eb;
-      margin: 24px 0 18px;
+      height: 1px;
+      background: #f3f4f6;
+      margin: 24px 0 20px;
     }
     .footer {
       text-align: center;
@@ -100,15 +105,9 @@
       font-style: italic;
       line-height: 1.5;
     }
-    .footer span {
-      display: block;
-      font-weight: 600;
-      color: #6366f1;
-      font-style: normal;
-      margin-bottom: 2px;
-    }
     #nav a {
-      font-size: 0.9rem;
+      font-size: 0.93rem;
+      padding: 8px 0;
     }
     @media (max-width: 400px) {
       .card { padding: 28px 20px 22px; }
@@ -118,33 +117,35 @@
 </head>
 <body>
   <div class="card">
+    <div class="date-badge">May 31, 2026</div>
 
-    <div class="date-badge">May 30, 2026</div>
+    <div class="word-title">Persist</div>
+    <div class="pronunciation">/pərˈsɪst/</div>
 
-    <div class="word-title">Concise</div>
-    <div class="pronunciation">/kənˈsaɪs/</div>
+    <div class="section-label">Meaning</div>
+    <p class="meaning">
+      To continue doing something steadily and without giving up, especially when it is difficult or takes a long time.
+    </p>
 
-    <div class="section-label meaning-label">Meaning</div>
-    <div class="meaning-text">
-      Expressing something clearly using only a few words — short, but complete and to the point.
+    <div class="box box-example">
+      <strong>Example</strong>
+      Mithun decided to persist with learning English every day, even when the grammar felt confusing.
     </div>
 
-    <div class="section-label example-label">Example</div>
-    <div class="box example-box">
-      "Please write a <strong>concise</strong> description of the bug so the team can understand it quickly."
+    <div class="box box-malayalam">
+      <strong>Malayalam Hint</strong>
+      <span style="font-size:1.05rem">തുടരുക / വിടാതെ ശ്രമിക്കുക</span><br/>
+      ഒരു കാര്യം ഉപേക്ഷിക്കാതെ, ബുദ്ധിമുട്ടുണ്ടെങ്കിലും തുടർന്നു ചെയ്യുക. "Persist" ചെയ്യുന്ന ആൾ ഒരിക്കലും മടുത്ത് നിർത്തില്ല.
     </div>
 
-    <div class="section-label malayalam-label">Malayalam Hint</div>
-    <div class="box malayalam-box">
-      <strong>സംക്ഷിപ്തമായ</strong> (samkshipthamaaya) — വളരെ കൂടുതൽ വാക്കുകൾ ഉപയോഗിക്കാതെ കാര്യം പറയുക. "To the point" എന്ന് ഇംഗ്ലീഷിൽ പറയുന്ന അർഥം.
+    <div class="box box-tip">
+      <strong>Laravel Developer Tip</strong>
+      In programming, <em>persist</em> means to save data permanently to a database. In Laravel, when you call <code>$model-&gt;save()</code>, you are persisting that record! So you already use this word every day — now use it in English too.
     </div>
 
-    <div class="section-label tip-label">Tip</div>
-    <div class="box tip-box">
-      Use <strong>concise</strong> to praise good writing or speech: <em>"Your email was concise and clear."</em> Developers often say "keep it concise" in code reviews and documentation. Opposite: <em>verbose</em> (too wordy).
-    </div>
+    <div class="divider"></div>
 
-    <hr class="divider" />
+    <div class="footer">Keep learning. Every word brings you closer.</div>
 
     <div id="nav" style="display:flex;justify-content:space-between;margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb">
       <a id="prev-btn" href="#" style="color:#6366f1;text-decoration:none;font-weight:600">&#8592; Previous</a>
@@ -161,14 +162,6 @@ var pu=toUrl(p),nu=toUrl(n);
 if(pu)document.getElementById('prev-btn').href=pu;else document.getElementById('prev-btn').style.display='none';
 if(nu)document.getElementById('next-btn').href=nu;else document.getElementById('next-btn').style.display='none';
     </script>
-
-    <hr class="divider" />
-
-    <div class="footer">
-      <span>Keep learning.</span>
-      Every word brings you closer.
-    </div>
-
   </div>
 </body>
 </html>
